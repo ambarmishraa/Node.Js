@@ -3,8 +3,7 @@
   npx tailwindcss init
 */
 
-@import "tailwindcss";
-/* body {
+body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -60,4 +59,4 @@ main {
 h2 {
   color: #333;
   font-size: 2rem;
-} */
+}

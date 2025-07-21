@@ -1,0 +1,34 @@
+<%- include('partials/head') %>
+    </head>
+
+    <body>
+        <%- include('partials/nav') %>
+            <a href="/host/add-home">Add a home</a>
+            <main>
+                <!-- <ul>
+                    <% registeredHomes.forEach(home=> { %>
+                        <li>
+                            <%= home.houseName %>
+                        </li>
+                        <% }); %>
+                </ul> -->
+
+                <% registeredHomes.forEach(home=> { %>
+                    <div class="card">
+                        <div class="homeImage">
+                            <img src="<%= home.houseImage %>" alt="Home Image">
+                        </div>
+                        <div class="homeInfo">
+                            <p>Name : <%= home.houseName %>
+                            </p>
+                            <p>Price/Night : <%= home.housePrice %></p>
+                            <p>Location : <%= home.houseLocation %></p>
+                            <p>Rating : <%= home.houseRating %></p>
+                        </div>
+                    </div>
+                    <% }); %>
+
+            </main>
+    </body>
+
+    </html>
