@@ -1,18 +1,14 @@
+const path = require('path');
+const rootDir = require('../utils/pathUtil');
 const express = require('express');
 const hostRouter = express.Router();
 
 hostRouter.get("/add-home", (req, res, next) => {
-    res.send(`<h1>Register your house here:</h1>
-        <form action="/add-home" method="POST">
-            <input type="text" name="houseName" placeholder="Home Name" required>
-            <input type="text" name="location" placeholder="Location" required>
-            <button type="submit">Add Home</button>`);
+    res.sendFile(path.join(rootDir, 'views', 'addHome.html'));
 });
 
 hostRouter.post("/add-home", (req, res, next) => {
-    console.log(req.body);
-    res.send(`<h1>Home added successfully!</h1>
-        <a href="/">Go back to home</a>`);
+    res.sendFile(path.join(rootDir, 'views', 'homeAdded.html'));
 });
 
 module.exports = hostRouter;
